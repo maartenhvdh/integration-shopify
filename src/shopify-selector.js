@@ -54,7 +54,7 @@ function getData(searchTerm, callback) {
             data: JSON.stringify({
                query: `
 {
-  products(first: 10, query: "title=${searchTerm}") {
+  products(first: 10, query: "title:${searchTerm}*") {
     edges {
       node {
         id
