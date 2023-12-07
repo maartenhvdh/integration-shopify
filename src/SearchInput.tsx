@@ -7,7 +7,7 @@ type Props = Readonly<{
 }>;
 
 export const SearchInput: FC<Props> = props => {
-  const [searchString, setSearchString] = useState('');
+  const [searchString, setSearchString] = useState("");
 
   const submit = props.isDisabled
     ? undefined
@@ -17,11 +17,14 @@ export const SearchInput: FC<Props> = props => {
     };
   const clear = () => {
     props.onClear();
-    setSearchString('');
-  }
+    setSearchString("");
+  };
 
   return (
-    <form className="search-form" onSubmit={submit}>
+    <form
+      className="search-form"
+      onSubmit={submit}
+    >
       <input
         className="search-term text-field__input"
         value={searchString}
@@ -52,4 +55,4 @@ export const SearchInput: FC<Props> = props => {
   );
 };
 
-SearchInput.displayName = 'SearchInput';
+SearchInput.displayName = "SearchInput";
